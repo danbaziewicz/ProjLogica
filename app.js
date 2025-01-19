@@ -1,23 +1,20 @@
-alert('Boas vindas aom jogo do número secreto');
+alert(`Boas vindas aom jogo do número secreto`);
 let numeroSecreto = 5;
 let palpite;
 let tentativas = 1;
 
 while(palpite != numeroSecreto) {
-    palpite =  prompt('Escolha um número entre 1 e 30');
+    palpite =  prompt(`Escolha um número entre 1 e 30`);
     if (numeroSecreto == palpite) {
         break;
     } else {
         if (palpite > numeroSecreto) {
-            alert('o número secreto é menor que '+palpite);
+            alert(`o número secreto é menor que ${palpite}`);
         } else {
-            alert('o número secreto é maior que '+palpite);
+            alert(`o número secreto é maior que ${palpite}`);
         }
         tentativas++;
     }
 }
-if(tentativas == 1) {
-    alert('Isso aí! Você acertou o número secreto é: '+numeroSecreto+ '\nVocê utilizou '+tentativas+' tentativa');
-} else {
-    alert('Isso aí! Você acertou o número secreto é: '+numeroSecreto+ '\nVocê utilizou '+tentativas+' tentativas');
-}
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+alert(`Isso aí! Você acertou o número secreto é: ${numeroSecreto} \nVocê utilizou ${tentativas} ${palavraTentativa}`);
