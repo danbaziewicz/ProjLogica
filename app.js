@@ -1,10 +1,10 @@
 alert(`Boas vindas aom jogo do número secreto`);
-let numeroSecreto = 5;
+let numeroSecreto = parseInt(Math.random() * 100 + 1);
 let palpite;
 let tentativas = 1;
 
 while(palpite != numeroSecreto) {
-    palpite =  prompt(`Escolha um número entre 1 e 30`);
+    palpite =  prompt(`Escolha um número entre 1 e 100`);
     if (numeroSecreto == palpite) {
         break;
     } else {
