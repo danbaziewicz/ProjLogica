@@ -6,7 +6,7 @@ let tentativas = 1;
 while(palpite != numeroSecreto) {
     palpite =  prompt('Escolha um número entre 1 e 30');
     if (numeroSecreto == palpite) {
-        alert('Isso aí! Você acertou o número secreto é: '+numeroSecreto+ '\n você utilizou '+tentativas+' tentativa(s)');
+        break;
     } else {
         if (palpite > numeroSecreto) {
             alert('o número secreto é menor que '+palpite);
@@ -15,4 +15,9 @@ while(palpite != numeroSecreto) {
         }
         tentativas++;
     }
+}
+if(tentativas == 1) {
+    alert('Isso aí! Você acertou o número secreto é: '+numeroSecreto+ '\nVocê utilizou '+tentativas+' tentativa');
+} else {
+    alert('Isso aí! Você acertou o número secreto é: '+numeroSecreto+ '\nVocê utilizou '+tentativas+' tentativas');
 }
